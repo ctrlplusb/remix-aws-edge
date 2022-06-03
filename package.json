@@ -1,0 +1,87 @@
+{
+  "name": "remix-aws-edge",
+  "version": "0.0.0",
+  "description": "An adapter to run Remix on AWS CloudFront Lambda@Edge",
+  "homepage": "https://github.com/ctrlplusb/remix-aws-edge",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=14"
+  },
+  "engineStrict": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctrlplusb/remix-aws-edge.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --sourcemap --format esm,cjs --target node14 --dts",
+    "lint": "eslint . --ext .js,.ts,.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc"
+  },
+  "keywords": [
+    "remix",
+    "node",
+    "lambda",
+    "edge",
+    "aws",
+    "cloudfront"
+  ],
+  "author": "Sean Matheson",
+  "license": "MIT",
+  "peerDependencies": {
+    "@remix-run/node": "1.x"
+  },
+  "devDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@types/aws-lambda": "^8.10.97",
+    "@types/node": "^16.11.35",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.6.2",
+    "tsup": "^5.12.8",
+    "typescript": "^4.7.0-beta"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "simple-import-sort",
+      "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "rules": {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
+    }
+  },
+  "eslintIgnore": [
+    "dist"
+  ],
+  "prettier": {
+    "trailingComma": "all"
+  }
+}

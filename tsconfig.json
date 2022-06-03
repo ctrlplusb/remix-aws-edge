@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "module": "nodenext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ES2020"
+  },
+  "include": ["src", "tests"]
+}
