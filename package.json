@@ -1,6 +1,6 @@
 {
   "name": "remix-aws-edge",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "An adapter to run Remix on AWS CloudFront Lambda@Edge",
   "homepage": "https://github.com/ctrlplusb/remix-aws-edge",
   "main": "./dist/index.js",
